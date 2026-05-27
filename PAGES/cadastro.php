@@ -11,6 +11,8 @@
 </head>
 <body>
     <h2 class="titulo-pagina">CADASTRO DE USUÁRIO</h2>
+    <a href="listar.php"><button>LISTAR</button></a>
+    
     <form method="post">
         <input type="text" name="nome" id="" class="input-form" placeholder="Digite o seu nome.">
         <input type="email" name="email" id="" class="input-form" placeholder="Digite o seu email.">
