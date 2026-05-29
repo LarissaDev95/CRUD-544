@@ -70,7 +70,19 @@
             $dados_usuario = $sql->fetch(PDO::FETCH_ASSOC);
 
             return $dados_usuario;
-        } 
+        }
+
+
+        public function atualizarDadosUsuario($id_usuario,$nome, $email, $telefone)
+        {
+            global $pdo;
+            $sql = $pdo->prepare("UPDATE usuario SET nome = :n, email = :e, telefone = :t WHERE id_usuario = :id");
+            $sql->bindValue(":n",$nome);
+            $sql->bindValue(":e",$email);
+            $sql->bindValue(":t",$telefone);
+            $sql->bindValue(":id",$id_usuario);
+            $sql->execute();
+        }
     }
 
 
